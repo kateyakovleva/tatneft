@@ -1,16 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {HeaderComponent} from './components/header/header.component';
-import {HomeComponent} from './pages/home/home/home.component';
-import {FooterComponent} from './components/footer/footer.component';
+import { Component, ViewEncapsulation } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, FooterComponent],
+  standalone: false,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
-})
+  styleUrl: './app.component.scss',
+  encapsulation: ViewEncapsulation.None
+} )
 export class AppComponent {
-  title = 't';
+  title = 'Татнефть';
 }

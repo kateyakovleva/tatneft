@@ -1,0 +1,62 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 20px 0 #0000000D;
+  background: #FFFFFF;
+  border-radius: 20px;
+
+  .title {
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #00A867;
+    transition: all .6s;
+
+    a {
+      margin-left: auto;
+    }
+
+    svg {
+      transition: all .6s;
+
+      path {
+        transition: all .6s;
+        stroke: #00A867;
+      }
+    }
+
+    &.open {
+      background: #E9FFF5;
+      color: #101010;
+
+      svg {
+        transform: rotate(45deg);
+
+        path {
+          stroke: #E73439;
+        }
+      }
+    }
+  }
+
+  .description {
+    padding: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    //white-space: pre-line;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    transition: all .6s;
+    max-height: 0;
+    overflow: hidden;
+
+    &.open {
+      max-height: 1000px;
+      background: #E9FFF5;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}

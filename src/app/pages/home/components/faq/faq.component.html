@@ -1,1 +1,6 @@
-<p>faq works!</p>
+<div class="container">
+  <h3>FAQ</h3>
+  <div class="faq-content">
+    <faq-item *ngFor="let faq of faqs" [faq]="faq"/>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div [class]="'title d-flex ' +(isOpen ? 'open' : '')">
+  {{faq?.title}}
+  <a href="#" (click)="change($event)">
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 7.5L15 22.5" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+      <path d="M22.5 15L7.5 15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
+<markdown [class]="'description '  +(isOpen ? 'open' : '')" [data]="faq?.description"></markdown>

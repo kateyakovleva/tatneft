@@ -1,4 +1,13 @@
-@import "./app/assets/fonts/fonts";
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/fonts/suisseintl.eot'); /* IE 9 Compatibility Mode */
+  src: url('/fonts/suisseintl.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('/fonts/suisseintl.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/suisseintl.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('/fonts/suisseintl.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/suisseintl.svg#suisseintl') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 
 body {
   overflow-x: hidden;
@@ -131,8 +140,28 @@ img {
   margin-bottom: 100px;
 }
 
+.mb-120 {
+  margin-bottom: 120px;
+}
+
 .mb-50 {
   margin-bottom: 50px;
 }
 
+.text-black {
+  color: black;
+}
 
+.text-white {
+  color: white;
+}
+
+markdown {
+  p, ol {
+    margin-top: 0;
+  }
+
+  ol {
+    padding-inline-start: 19px;
+  }
+}
