@@ -1,0 +1,46 @@
+.title-text {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: start;
+  color: #00A867;
+  margin-bottom: 40px;
+}
+
+.sub-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: start;
+  color: #101010;
+  margin-bottom: 20px;
+}
+
+.picture {
+  width: 50%;
+  border-radius: 30px;
+}
+
+.sub-text-green {
+  width: 300px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: start;
+  color: #00A867;
+}
+
+.padding-left {
+  padding: 60px 80px 0 0;
+}
+
+.padding-right {
+  padding: 60px 0 0 80px;
+}
+
+.flow {
+  transform: rotate(12deg);
+  width: 210px;
+  bottom: 0;
+  right: -120px;
+}

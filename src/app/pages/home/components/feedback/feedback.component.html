@@ -1,0 +1,41 @@
+<div class="d-flex direction-column container mb-100">
+  <p-carousel
+    [style.width]="'100vw'"
+    [style.margin-bottom]="'30px'"
+    [page]="page"
+    [value]="items"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+    [showIndicators]="isMobile"
+    [showNavigators]="false"
+    (onPage)="onPage($event)"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-item pTemplate="item">
+      <div class="slide d-flex a-i-center j-c-start relative">
+        <div class="d-flex direction-column w-100">
+          <div class="title">{{item.name}}</div>
+          <div class="sub-title">{{item.text}}</div>
+          <div class="d-flex j-c-start a-i-center gap-10">
+            <img class="img-heart" src="images/heart.svg" alt="like"/>
+            <div class="counter">{{item.counter}}</div>
+          </div>
+          <img class="absolute img-flower" src="images/2flowers.svg" alt="flowers"/>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+
+  <div class="container d-flex j-c-space-between">
+    <app-button></app-button>
+    <div class="d-flex j-c-center a-i-center gap-15">
+      <button type="button"(click)="prev()">
+        <img class="row" src="images/left.svg" alt="left"/>
+      </button>
+      <button type="button"(click)="next()">
+        <img class="row" src="images/right.svg" alt="right"/>
+      </button>
+    </div>
+  </div>
+</div>
