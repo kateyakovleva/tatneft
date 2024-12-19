@@ -5,6 +5,12 @@
   background: #FFFFFF;
   border-radius: 20px;
 
+  &:hover {
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+    box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+  }
+
   .title {
     padding: 30px;
     font-size: 20px;

@@ -1,5 +1,5 @@
 <div class="container d-flex direction-column">
-  <div class="d-flex direction-row mb-50 shadow">
+  <div class="d-flex direction-row mb-50 shadow mobile-container">
     <div class="d-flex direction-column padding-left">
       <div class="title-text">Поделиться добром</div>
       <div class="sub-text">Мы уверены, что каждый, поступок, совершённый с добром и от чистого сердца, имеет большое значение для развития региона.</div>
@@ -7,16 +7,25 @@
     </div>
     <img class="picture" src="images/3.png" alt="hand"/>
   </div>
-  <div class="d-flex direction-row shadow">
-    <img class="picture" src="images/4.png" alt="list"/>
-    <div class="d-flex direction-column padding-right relative">
+  <div class="d-flex direction-row shadow mobile-container">
+    <div class="display">
       <div class="sub-text">
         На этом сайте вы можете поделиться своими инициативами и рассказать, какие добрые дела и проекты реализуете в нашей республике и за её пределами. Помните, доброта не нуждается в измерении, а значимость не зависит от масштаба.
       </div>
       <div class="sub-text mb-50">
         Мы ежедневно мониторим и публикуем ваши ответы на этом сайте. О самый интересных и необычных добрых делах мы расскажем в наших соцсетях.  А в конце 2025 года наградим самых активных участников ценными призами от компании «Татнефть».
       </div>
-      <app-button style="margin-top: 60px;"></app-button>
+      <app-button class="mt-60"></app-button>
+    </div>
+    <img class="picture" src="images/4.png" alt="list"/>
+    <div class="d-flex direction-column padding-right relative">
+      <div class="sub-text display-none">
+        На этом сайте вы можете поделиться своими инициативами и рассказать, какие добрые дела и проекты реализуете в нашей республике и за её пределами. Помните, доброта не нуждается в измерении, а значимость не зависит от масштаба.
+      </div>
+      <div class="sub-text mb-50 display-none">
+        Мы ежедневно мониторим и публикуем ваши ответы на этом сайте. О самый интересных и необычных добрых делах мы расскажем в наших соцсетях.  А в конце 2025 года наградим самых активных участников ценными призами от компании «Татнефть».
+      </div>
+      <app-button class="mt-60 display-none"></app-button>
       <img class="absolute flow" src="images/flow22.svg" alt="flowers"/>
     </div>
   </div>

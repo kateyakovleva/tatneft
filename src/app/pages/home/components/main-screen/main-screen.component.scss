@@ -87,11 +87,95 @@
   }
 }
 
+.mobile2 {
+  display: none;
+}
+
 .text-btn {
   width: 280px;
   text-align: start;
   color: #000000;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 22px;
+}
+
+@media (max-width: 1050px) {
+  .main-screen {
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .mobile2 {
+    display: flex;
+    width: 90px;
+    position: absolute;
+    top: 160px;
+    right: 0;
+  }
+
+  .mobile1 {
+    display: none;
+  }
+
+  .container-50 {
+    padding: 0 20px 30px;
+    width: 95%;
+    align-items: start;
+  }
+
+  .logo {
+    margin-top: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .count {
+    width: 94px;
+    height: 140px;
+    font-size: 96px;
+    font-weight: 500;
+    line-height: 134px;
+  }
+
+  .sub-text {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+  }
+
+  .btn {
+    margin-top: 30px;
+    width: 303px;
+    padding: 20px 30px;
+  }
+
+  .title1 {
+    left: 210px;
+    top: 230px;
+  }
+
+  .title2 {
+    left: 190px;
+    top: 270px;
+  }
+
+  .title3 {
+    left: 170px;
+    top: 310px;
+  }
+
+  .text-btn {
+    width: 260px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
 }

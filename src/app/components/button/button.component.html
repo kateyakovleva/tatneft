@@ -1,5 +1,8 @@
-<button type="button" class="green-btn d-flex direction-row a-i-center j-c-space-between">
+<button type="button" class="green-btn d-flex direction-row a-i-center j-c-space-between" (click)="openModal()">
   <div>Поделиться добром</div>
   <img class="first-img" src="images/arrow.svg" alt="arrow"/>
   <img class="second-img" src="images/hover1.svg" alt="arrow"/>
 </button>
+<div *ngIf="showModal" class="modal">
+  <app-modal-window></app-modal-window>
+</div>

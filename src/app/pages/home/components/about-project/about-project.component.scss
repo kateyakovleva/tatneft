@@ -21,6 +21,12 @@
   border-radius: 30px;
 }
 
+
+.display {
+  display: none;
+}
+
+
 .sub-text-green {
   width: 300px;
   font-size: 18px;
@@ -43,4 +49,60 @@
   width: 210px;
   bottom: 0;
   right: -120px;
+}
+
+@media (max-width: 1050px) {
+  .mobile-container {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .title-text {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+
+  .display {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .mb-50 {
+    margin-bottom: 30px;
+  }
+
+  .display-none {
+    display: none;
+  }
+
+  .picture {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .sub-text-green {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .padding-left {
+    padding: 0;
+  }
+
+  .padding-right {
+    padding: 0;
+  }
+
+  .flow {
+    display: none;
+  }
 }

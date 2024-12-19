@@ -1,4 +1,4 @@
-<div class="d-flex container j-c-space-between a-i-center padding-20">
+<div class="d-flex container j-c-space-between a-i-center padding-20" *ngIf="!isMobile">
   <img src="images/logo.svg" alt="logo"/>
   <div class="d-flex j-c-end a-i-center w-80 gap-10">
     <div class="link" (click)="toSection('about-project')">О проекте</div>

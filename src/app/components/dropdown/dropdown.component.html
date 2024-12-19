@@ -1,11 +1,15 @@
-<div class="d-flex relative direction-column">
-  <div class="container-btn d-flex a-i-center j-c-center gap-15" (click)="showItemsList()">
+<div class="d-flex direction-column">
+  <div class="container-btn d-flex a-i-center j-c-center gap-15 relative" (click)="showItemsList()">
     <div class="btn">Выберите период</div>
     <img [style.transform]="'rotate(' + (isOpen ? '180deg' : '0deg') +')'" src="images/arr.svg" alt="icon"
          style="width: 14px"/>
+    <div class="d-flex direction-column absolute items-list a-1-start" *ngIf="isOpen">
+      <!--    <ng-content></ng-content>-->
+      <div class="item mb-20 mt-20">Январь</div>
+      <div class="item mb-20">Февраль</div>
+      <div class="item">Март</div>
+    </div>
   </div>
-  <div class="d-flex direction-column absolute items-list a-1-start" *ngIf="isOpen">
-    <ng-content></ng-content>
-  </div>
+
 </div>
 

@@ -9,7 +9,6 @@
   }
 
   .slide {
-    //width: 340px;
     margin-right: 20px;
     border-radius: 20px;
     background-color: #ffffff;
@@ -17,8 +16,14 @@
     -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+      -moz-box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+      box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+    }
   }
-  
+
   .p-carousel-item:last-child {
     .slide {
       margin-right: 0;
@@ -73,4 +78,55 @@
   }
 }
 
+@media (max-width: 1050px) {
+  .tatneft-projects {
+    .title {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-size: 28px;
+      line-height: 33px;
+    }
 
+    .slide {
+      margin-right: 20px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      padding: 10px 10px 0 10px;
+      -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+      box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+        -moz-box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+        box-shadow: 2px 2px 20px 0px rgba(0, 168, 103, 0.2);
+      }
+    }
+
+    .p-carousel-item:last-child {
+      .slide {
+        margin-right: 0;
+      }
+    }
+
+    .img {
+      width: 270px;
+    }
+
+    .tit {
+      width: 250px;
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    .sub-tit {
+      width: 250px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    .cont {
+      padding: 0 10px 20px 10px;
+    }
+  }
+}

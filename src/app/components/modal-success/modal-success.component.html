@@ -1,0 +1,16 @@
+<div class="d-flex direction-column modal-container" *ngIf="modalSuccess">
+  <div class="d-flex j-c-end">
+    <button type="button" (click)="close()">
+      <img src="images/close.svg" alt="close" style="padding: 10px 10px 0 0"/>
+    </button>
+  </div>
+  <div class="content-container d-flex direction-column">
+    <div class="title-g">
+      Спасибо! После небольшой модерации ваше доброе дело появится на главном экране сайта
+    </div>
+    <div class="sub-text-g">
+      Узнайте, какие еще добрые инициативы реализовали жители Республики
+    </div>
+    <button type="button" class="submit-btn">Посмотреть</button>
+  </div>
+</div>

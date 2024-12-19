@@ -1,0 +1,30 @@
+<div class="d-flex direction-column modal-container" *ngIf="modalWindow">
+  <div class="d-flex j-c-end">
+    <button type="button" (click)="close()">
+      <img src="images/close.svg" alt="close" style="padding: 10px 10px 0 0"/>
+    </button>
+  </div>
+  <div class="content-container d-flex direction-column">
+    <div class="title-g">Какое доброе дело хотите предложить?</div>
+    <div class="d-flex j-c-start mb-20 direction-column">
+      <label class="label">Ваше имя</label>
+      <input class="input" placeholder="Иванов Иван"/>
+    </div>
+    <div class="d-flex j-c-start mb-20 direction-column">
+      <label class="label">Номер телефона</label>
+      <input class="input" placeholder="+7(900)000-00-00"/>
+    </div>
+    <div class="d-flex j-c-start mb-20 direction-column">
+      <label class="label red">Ваш Email</label>
+      <input class="input red-input" placeholder="profile@gmail.com"/>
+    </div>
+    <div class="d-flex j-c-start mb-20 direction-column">
+      <label class="label">Здесь вы можете рассказать о своём добром деле</label>
+      <textarea class="input" placeholder="Что хотите предложить?" style="min-height: 104px"></textarea>
+    </div>
+    <button type="submit" class="submit-btn" (click)="open()">Отправить</button>
+    <div class="sub-text-g">
+      Нажимая кнопку «Отправить», вы даёте согласие на обработку персональных данных и публикацию вашего ответа на сайте tatneft-dobroe-delo.ru
+    </div>
+  </div>
+</div>

@@ -6,5 +6,23 @@
 }
 
 .tex-border {
+  color: #4D4D4D;
   border-bottom: 1px solid #4D4D4D;
+
+  &:hover {
+    color: #00A867;
+    border-bottom: #00A867;;
+  }
+}
+
+@media (max-width: 1050px) {
+  .j-c-space-between {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .tex {
+    margin-bottom: 20px;
+  }
 }

@@ -12,4 +12,16 @@
     flex-direction: column;
     gap: 10px;
   }
+
+
+}
+
+@media (max-width: 1050px) {
+  :host {
+    h3 {
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 20px;
+    }
+  }
 }

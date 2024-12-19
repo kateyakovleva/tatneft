@@ -39,12 +39,10 @@ button {
 input {
   outline: none;
   text-decoration: none;
-  border: none;
 
   &:hover, &:active, &:focus {
     outline: none;
     text-decoration: none;
-    border: none;
   }
 }
 
@@ -172,5 +170,12 @@ markdown {
 
   ol {
     padding-inline-start: 19px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 343px;
+    margin: 0 auto 0;
   }
 }
