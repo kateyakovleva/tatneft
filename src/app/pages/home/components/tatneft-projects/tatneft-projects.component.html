@@ -1,1 +1,44 @@
-<p>tatneft-projects works!</p>
+<div class="container d-flex direction-column">
+  <div class="title">Проекты «Татнефть»</div>
+    <app-dropdown style="margin-bottom: 30px"></app-dropdown>
+    <p-carousel
+      [style.width]="'100vw'"
+      [style.margin-bottom]="'30px'"
+      [page]="page"
+      [value]="items"
+      [numVisible]="4"
+      [numScroll]="2"
+      [circular]="true"
+      [showIndicators]="isMobile"
+      [showNavigators]="false"
+      (onPage)="onPage($event)"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-item pTemplate="item">
+        <div class="slide d-flex direction-column">
+          <img class="img" src="images/ground.png" alt="flowers"/>
+          <div class="d-flex direction-column cont">
+            <div class="tit">{{item.name}}</div>
+            <div class="d-flex direction-row a-i-center gap-10">
+              <div class="light-green">{{item.btn1}}</div>
+              <div class="deep-green">{{item.btn2}}</div>
+            </div>
+            <div class="sub-tit">{{item.text}}</div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+
+    <div class="container d-flex j-c-start">
+      <div class="d-flex j-c-center a-i-center gap-15">
+        <button type="button" (click)="prev()">
+          <img class="row" src="images/left.svg" alt="left"/>
+        </button>
+        <button type="button" (click)="next()">
+          <img class="row" src="images/right.svg" alt="right"/>
+        </button>
+      </div>
+    </div>
+  </div>
+
+

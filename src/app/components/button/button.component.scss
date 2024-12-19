@@ -7,4 +7,21 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
+
+  .second-img {
+    display: none;
+  }
+
+  &:hover {
+
+    .first-img {
+      display: none;
+    }
+
+    .second-img {
+      display: inline;
+    }
+
+    background-color: black;
+  }
 }

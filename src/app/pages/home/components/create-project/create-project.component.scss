@@ -1,0 +1,39 @@
+.picture-back {
+  background-image: url("../../../../../../public/images/work.png");
+  border-radius: 30px;
+  width: 100%;
+  background-position: center;
+  height: 665px;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  color: #ffffff;
+  padding: 63px 0px 52px 50px
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+.sub-title {
+  width: 450px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 40px;
+  width: 162px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 15px 20px;
+  border-radius: 100px;
+  border: 1px solid #ffffff;
+}

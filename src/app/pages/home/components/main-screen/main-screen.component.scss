@@ -65,6 +65,26 @@
   padding: 30px;
   border: 1px solid #00A867;
   border-radius: 100px;
+
+  .second-img {
+    display: none;
+  }
+
+  &:hover {
+
+    .text-btn {
+      color: #ffffff;
+    }
+
+    .first-img {
+      display: none;
+    }
+    .second-img {
+      display: inline;
+    }
+
+    background-color: #00A867;
+  }
 }
 
 .text-btn {
