@@ -1,68 +1,76 @@
-.title {
-  margin-top: 100px;
-  margin-bottom: 30px;
-  font-size: 42px;
-  font-weight: 500;
-  line-height: 50px;
-  color: #00A867;
-}
+.tatneft-projects {
+  .title {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 50px;
+    color: #00A867;
+  }
 
-.slide {
-  width: 340px;
-  margin-right: 20px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  padding: 10px 10px 0 10px;
-  -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
-}
+  .slide {
+    //width: 340px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 10px 10px 0 10px;
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .p-carousel-item:last-child {
+    .slide {
+      margin-right: 0;
+    }
+  }
 
-.img {
-  width: 320px;
-  border-radius: 16px;
-  margin-bottom: 20px;
-}
+  .img {
+    width: 320px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
 
-.tit {
-  width: 280px;
-  text-align: start;
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
-  color: #00A867;
-}
+  .tit {
+    width: 280px;
+    text-align: start;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #00A867;
+  }
 
-.light-green, .deep-green {
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 17px;
-  padding: 4px 10px;
-  border-radius: 20px;
-}
+  .light-green, .deep-green {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
 
-.light-green {
-  background-color: #7FBA4D;
-}
+  .light-green {
+    background-color: #7FBA4D;
+  }
 
-.deep-green {
-  background-color: #158D64;
-}
+  .deep-green {
+    background-color: #158D64;
+  }
 
-.sub-tit {
-  width: 280px;
-  text-align: start;
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-  color: #101010;
-}
+  .sub-tit {
+    width: 280px;
+    text-align: start;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #101010;
+  }
 
-.cont {
-  padding: 0 30px 30px 30px;
+  .cont {
+    padding: 0 30px 30px 30px;
+  }
 }
 
 

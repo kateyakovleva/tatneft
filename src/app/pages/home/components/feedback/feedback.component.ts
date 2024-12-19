@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
-import {CarouselModule, CarouselPageEvent, CarouselResponsiveOptions} from "primeng/carousel";
-import {ButtonComponent} from '../../../../components/button/button.component';
-@Component({
+import { AfterViewChecked, Component, ViewEncapsulation } from '@angular/core';
+import { CarouselModule, CarouselPageEvent } from "primeng/carousel";
+import { ButtonComponent } from '../../../../components/button/button.component';
+import { NgIf } from '@angular/common';
+
+@Component( {
   selector: 'app-feedback',
   standalone: true,
-  imports: [CarouselModule, ButtonComponent],
+  imports: [ CarouselModule, ButtonComponent, NgIf ],
   templateUrl: './feedback.component.html',
-  styleUrl: './feedback.component.scss'
-})
-export class FeedbackComponent {
+  styleUrl: './feedback.component.scss',
+  encapsulation: ViewEncapsulation.None,
+} )
+export class FeedbackComponent implements AfterViewChecked {
 
   items = [
     {
@@ -20,7 +23,7 @@ export class FeedbackComponent {
       counter: '234'
     },
     {
-      id: 1,
+      id: 2,
       name: 'Гиязов Марат',
       text: 'То, что идет от сердца к сердцу.\n' +
         '            Желание отдавать добро и не ждать ничего взамен. Когда ты делаешь что-то значимое для другого человека, и \n' +
@@ -28,7 +31,7 @@ export class FeedbackComponent {
       counter: '54'
     },
     {
-      id: 1,
+      id: 3,
       name: 'Соколовский Иван',
       text: 'Это может каждый.\n' +
         '            Раз в неделю, раз в месяц или даже раз в год - это всегда останется добрым делом.\n' +
@@ -36,7 +39,7 @@ export class FeedbackComponent {
       counter: '101'
     },
     {
-      id: 1,
+      id: 4,
       name: 'Смирнов Павел',
       text: 'Даже самое малое доброе дело может стать огромным делом в жизни человека.\n' +
         '            Сделать что-то полезное просто так. Подать пример другим.\n' +
@@ -47,35 +50,30 @@ export class FeedbackComponent {
 
   isMobile = window.innerWidth < 600;
 
-  responsiveOptions: CarouselResponsiveOptions[] = [
-    {
-      breakpoint: '700px',
-      numScroll: 1,
-      numVisible: 1
-    },
-    {
-      breakpoint: '1200px',
-      numScroll: 1,
-      numVisible: 2
-    },
-    {
-      breakpoint: '3000px',
-      numScroll: 1,
-      numVisible: 3
-    }
-  ];
-
   page = 0;
 
-  onPage(event: CarouselPageEvent) {
+  onPage( event: CarouselPageEvent ) {
     // this.page = event.page || 0;
   }
 
   next() {
-    this.page = Math.min(this.page + 1, 1);
+    this.page = Math.min( this.page + 1, this.items.length - 1 );
   }
 
   prev() {
-    this.page = Math.max(this.page - 1, 0);
+    this.page = Math.max( this.page - 1, 0 );
+  }
+
+  ngAfterViewChecked(): void {
+    const container = document.querySelector( '.container' ) as HTMLDivElement;
+    const viewport = document.querySelector( 'app-feedback .p-carousel-viewport' ) as HTMLDivElement;
+    const itemList = document.querySelector( 'app-feedback .p-carousel-item-list' ) as HTMLDivElement;
+    if ( container && viewport ) {
+      const p = ( window.innerWidth - container.clientWidth ) / 2;
+      viewport.style.paddingLeft = `${ p }px`;
+      viewport.style.paddingRight = `${ p }px`;
+      viewport.style.marginLeft = `-${ p }px`;
+      // viewport.style.paddingRight = `${ p }px`;
+    }
   }
 }

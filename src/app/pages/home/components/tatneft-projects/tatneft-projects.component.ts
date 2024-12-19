@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import {ButtonComponent} from '../../../../components/button/button.component';
-import {Carousel, CarouselPageEvent, CarouselResponsiveOptions} from 'primeng/carousel';
-import {PrimeTemplate} from 'primeng/api';
-import {DropdownComponent} from '../../../../components/dropdown/dropdown.component';
+import { AfterViewChecked, Component, ViewEncapsulation } from '@angular/core';
+import { ButtonComponent } from '../../../../components/button/button.component';
+import { Carousel, CarouselPageEvent } from 'primeng/carousel';
+import { PrimeTemplate } from 'primeng/api';
+import { DropdownComponent } from '../../../../components/dropdown/dropdown.component';
 
-@Component({
+@Component( {
   selector: 'app-tatneft-projects',
   standalone: true,
   imports: [
@@ -14,9 +14,10 @@ import {DropdownComponent} from '../../../../components/dropdown/dropdown.compon
     DropdownComponent
   ],
   templateUrl: './tatneft-projects.component.html',
-  styleUrl: './tatneft-projects.component.scss'
-})
-export class TatneftProjectsComponent {
+  styleUrl: './tatneft-projects.component.scss',
+  encapsulation: ViewEncapsulation.None,
+} )
+export class TatneftProjectsComponent implements AfterViewChecked {
 
   items = [
     {
@@ -95,36 +96,30 @@ export class TatneftProjectsComponent {
 
   isMobile = window.innerWidth < 600;
 
-  responsiveOptions: CarouselResponsiveOptions[] = [
-    {
-      breakpoint: '700px',
-      numScroll: 1,
-      numVisible: 1
-    },
-    {
-      breakpoint: '1200px',
-      numScroll: 1,
-      numVisible: 2
-    },
-    {
-      breakpoint: '3000px',
-      numScroll: 1,
-      numVisible: 3
-    }
-  ];
-
   page = 0;
 
-  onPage(event: CarouselPageEvent) {
+  onPage( event: CarouselPageEvent ) {
     // this.page = event.page || 0;
   }
 
   next() {
-    this.page = Math.min(this.page + 1, 1);
+    this.page = Math.min( this.page + 1, this.items.length - 1 );
   }
 
   prev() {
-    this.page = Math.max(this.page - 1, 0);
+    this.page = Math.max( this.page - 1, 0 );
   }
 
+  ngAfterViewChecked(): void {
+    const container = document.querySelector( '.container' ) as HTMLDivElement;
+    const viewport = document.querySelector( 'app-tatneft-projects .p-carousel-viewport' ) as HTMLDivElement;
+    const itemList = document.querySelector( 'app-tatneft-projects .p-carousel-item-list' ) as HTMLDivElement;
+    if ( container && viewport ) {
+      const p = ( window.innerWidth - container.clientWidth ) / 2;
+      viewport.style.paddingLeft = `${ p }px`;
+      viewport.style.paddingRight = `${ p }px`;
+      viewport.style.marginLeft = `-${ p }px`;
+      // viewport.style.paddingRight = `${ p }px`;
+    }
+  }
 }
