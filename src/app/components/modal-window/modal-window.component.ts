@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
-import {NgIf} from '@angular/common';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { ModalStore } from '../../services/ModalStore';
 
-@Component({
+@Component( {
   selector: 'app-modal-window',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    AsyncPipe
   ],
   templateUrl: './modal-window.component.html',
   styleUrl: './modal-window.component.scss'
-})
+} )
 export class ModalWindowComponent {
-
-  modalWindow: boolean = true;
+  constructor(
+    public modal: ModalStore,
+  ) {
+  }
 
   modalSuccess: boolean = false;
 
   close() {
-    this.modalWindow = !this.modalWindow
+    this.modal.hide();
   }
 
   open() {

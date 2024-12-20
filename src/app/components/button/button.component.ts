@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import {NgIf} from '@angular/common';
-import {ModalWindowComponent} from '../modal-window/modal-window.component';
+import { NgIf } from '@angular/common';
+import { ModalWindowComponent } from '../modal-window/modal-window.component';
+import { ModalStore } from '../../services/ModalStore';
 
-@Component({
+@Component( {
   selector: 'app-button',
   standalone: true,
   imports: [
@@ -11,13 +12,14 @@ import {ModalWindowComponent} from '../modal-window/modal-window.component';
   ],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'
-})
+} )
 export class ButtonComponent {
-
-  showModal: boolean = false;
-
-  openModal() {
-    this.showModal = !this.showModal;
+  constructor(
+    private modal: ModalStore,
+  ) {
   }
 
+  openModal() {
+    this.modal.show();
+  }
 }

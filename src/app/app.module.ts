@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalWindowComponent } from "./components/modal-window/modal-window.component";
 
 @NgModule( {
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
+    ModalWindowComponent,
   ],
   providers: [
     provideMarkdown()
