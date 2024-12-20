@@ -1,6 +1,6 @@
 <div class="d-flex direction-column container mb-120 feedback-container">
   <p-carousel
-    [style.width]="'100vw'"
+    [style.width]="!isMobile ? '100vw' : ''"
     [style.margin-bottom]="'30px'"
     [page]="page"
     [value]="items"
@@ -10,6 +10,11 @@
     [showIndicators]="isMobile"
     [showNavigators]="false"
     (onPage)="onPage($event)"
+    [responsiveOptions]="[{
+        breakpoint: '1000px',
+        numVisible: 1,
+        numScroll: 1
+    }]"
   >
     <ng-template let-item pTemplate="item">
       <div class="slide d-flex a-i-center j-c-start relative">
@@ -26,7 +31,7 @@
     </ng-template>
   </p-carousel>
 
-  <div class="container d-flex j-c-space-between mob">
+  <div *ngIf="!isMobile" class="container d-flex j-c-space-between mob">
     <app-button class="mobile-btn"></app-button>
     <div class="d-flex j-c-center a-i-center gap-15 mob-btn">
       <button type="button" (click)="prev()">

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {NgIf} from '@angular/common';
+import { NgIf } from '@angular/common';
+import { isMobile } from '../../utils/utils';
 
-@Component({
+@Component( {
   selector: 'app-header',
   standalone: true,
   imports: [
@@ -9,13 +10,14 @@ import {NgIf} from '@angular/common';
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
-})
+} )
 export class HeaderComponent {
 
-  isMobile = window.innerWidth < 1050;
-  toSection(name: string) {
-    let top = (document.querySelector('app-' + name) as HTMLElement)?.offsetTop - 95;
-    window.scrollTo({top: top, behavior: 'smooth'});
+  isMobile = isMobile;
+
+  toSection( name: string ) {
+    let top = ( document.querySelector( 'app-' + name ) as HTMLElement )?.offsetTop - 95;
+    window.scrollTo( { top: top, behavior: 'smooth' } );
   }
 
 }

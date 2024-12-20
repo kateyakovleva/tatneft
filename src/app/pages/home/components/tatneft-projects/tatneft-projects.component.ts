@@ -3,6 +3,8 @@ import { ButtonComponent } from '../../../../components/button/button.component'
 import { Carousel, CarouselPageEvent } from 'primeng/carousel';
 import { PrimeTemplate } from 'primeng/api';
 import { DropdownComponent } from '../../../../components/dropdown/dropdown.component';
+import { isMobile } from '../../../../utils/utils';
+import { NgIf } from '@angular/common';
 
 @Component( {
   selector: 'app-tatneft-projects',
@@ -11,7 +13,8 @@ import { DropdownComponent } from '../../../../components/dropdown/dropdown.comp
     ButtonComponent,
     Carousel,
     PrimeTemplate,
-    DropdownComponent
+    DropdownComponent,
+    NgIf
   ],
   templateUrl: './tatneft-projects.component.html',
   styleUrl: './tatneft-projects.component.scss',
@@ -94,7 +97,7 @@ export class TatneftProjectsComponent implements AfterViewChecked {
     },
   ]
 
-  isMobile = window.innerWidth < 600;
+  isMobile = isMobile;
 
   page = 0;
 
@@ -111,15 +114,17 @@ export class TatneftProjectsComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-    const container = document.querySelector( '.container' ) as HTMLDivElement;
-    const viewport = document.querySelector( 'app-tatneft-projects .p-carousel-viewport' ) as HTMLDivElement;
-    const itemList = document.querySelector( 'app-tatneft-projects .p-carousel-item-list' ) as HTMLDivElement;
-    if ( container && viewport ) {
-      const p = ( window.innerWidth - container.clientWidth ) / 2;
-      viewport.style.paddingLeft = `${ p }px`;
-      viewport.style.paddingRight = `${ p }px`;
-      viewport.style.marginLeft = `-${ p }px`;
-      // viewport.style.paddingRight = `${ p }px`;
+    if ( !isMobile ) {
+      const container = document.querySelector( '.container' ) as HTMLDivElement;
+      const viewport = document.querySelector( 'app-tatneft-projects .p-carousel-viewport' ) as HTMLDivElement;
+      const itemList = document.querySelector( 'app-tatneft-projects .p-carousel-item-list' ) as HTMLDivElement;
+      if ( container && viewport ) {
+        const p = ( window.innerWidth - container.clientWidth ) / 2;
+        viewport.style.paddingLeft = `${ p }px`;
+        viewport.style.paddingRight = `${ p }px`;
+        viewport.style.marginLeft = `-${ p }px`;
+        // viewport.style.paddingRight = `${ p }px`;
+      }
     }
   }
 }

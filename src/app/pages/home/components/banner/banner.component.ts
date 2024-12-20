@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { Carousel } from 'primeng/carousel';
 import { PrimeTemplate } from 'primeng/api';
 import { banners } from '../../../../data/banners';
+import { isMobile } from '../../../../utils/utils';
 
 @Component( {
   selector: 'app-banner',
@@ -15,7 +16,7 @@ import { banners } from '../../../../data/banners';
   encapsulation: ViewEncapsulation.None
 } )
 export class BannerComponent {
-  isMobile = window.innerWidth < 600;
+  isMobile = isMobile;
 
   page = 0;
 

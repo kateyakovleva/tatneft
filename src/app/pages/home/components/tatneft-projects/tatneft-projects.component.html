@@ -2,7 +2,7 @@
   <div class="title">Проекты «Татнефть»</div>
   <app-dropdown style="margin-bottom: 30px"></app-dropdown>
   <p-carousel
-    [style.width]="'100vw'"
+    [style.width]="!isMobile ? '100vw' : ''"
     [style.margin-bottom]="'30px'"
     [page]="page"
     [value]="items"
@@ -12,6 +12,11 @@
     [showIndicators]="isMobile"
     [showNavigators]="false"
     (onPage)="onPage($event)"
+    [responsiveOptions]="[{
+        breakpoint: '1000px',
+        numVisible: 1,
+        numScroll: 1
+    }]"
   >
     <ng-template let-item pTemplate="item">
       <div class="slide d-flex direction-column">
@@ -28,7 +33,7 @@
     </ng-template>
   </p-carousel>
 
-  <div class="container d-flex j-c-start">
+  <div *ngIf="!isMobile" class="container d-flex j-c-start">
     <div class="d-flex j-c-center a-i-center gap-15">
       <button type="button" (click)="prev()">
         <img class="row" src="images/left.svg" alt="left"/>

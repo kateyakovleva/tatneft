@@ -2,6 +2,7 @@ import { AfterViewChecked, Component, ViewEncapsulation } from '@angular/core';
 import { CarouselModule, CarouselPageEvent } from "primeng/carousel";
 import { ButtonComponent } from '../../../../components/button/button.component';
 import { NgIf } from '@angular/common';
+import { isMobile } from '../../../../utils/utils';
 
 @Component( {
   selector: 'app-feedback',
@@ -48,7 +49,7 @@ export class FeedbackComponent implements AfterViewChecked {
     },
   ]
 
-  isMobile = window.innerWidth < 600;
+  isMobile = isMobile;
 
   page = 0;
 
@@ -65,15 +66,17 @@ export class FeedbackComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked(): void {
-    const container = document.querySelector( '.container' ) as HTMLDivElement;
-    const viewport = document.querySelector( 'app-feedback .p-carousel-viewport' ) as HTMLDivElement;
-    const itemList = document.querySelector( 'app-feedback .p-carousel-item-list' ) as HTMLDivElement;
-    if ( container && viewport ) {
-      const p = ( window.innerWidth - container.clientWidth ) / 2;
-      viewport.style.paddingLeft = `${ p }px`;
-      viewport.style.paddingRight = `${ p }px`;
-      viewport.style.marginLeft = `-${ p }px`;
-      // viewport.style.paddingRight = `${ p }px`;
+    if ( !isMobile ) {
+      const container = document.querySelector( '.container' ) as HTMLDivElement;
+      const viewport = document.querySelector( 'app-feedback .p-carousel-viewport' ) as HTMLDivElement;
+      const itemList = document.querySelector( 'app-feedback .p-carousel-item-list' ) as HTMLDivElement;
+      if ( container && viewport ) {
+        const p = ( window.innerWidth - container.clientWidth ) / 2;
+        viewport.style.paddingLeft = `${ p }px`;
+        viewport.style.paddingRight = `${ p }px`;
+        viewport.style.marginLeft = `-${ p }px`;
+        // viewport.style.paddingRight = `${ p }px`;
+      }
     }
   }
 }
