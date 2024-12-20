@@ -82,7 +82,7 @@
 
     .mob {
       position: relative;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: start;
     }
 
@@ -91,8 +91,8 @@
     }
 
     .mobile-btn {
-      position: absolute;
-      bottom: -80px;
+      margin-bottom: 60px;
+      margin-top: 30px;
     }
 
   }
