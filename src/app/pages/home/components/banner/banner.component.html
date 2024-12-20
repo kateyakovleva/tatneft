@@ -11,7 +11,7 @@
   >
     <ng-template let-item pTemplate="item">
       <div [class]="'slide ' + item.color">
-        <img [src]="item.image" [alt]="item.title + ' ' + item.subtitle"/>
+        <img [src]="isMobile ? item.mobImage : item.image" [alt]="item.title + ' ' + item.subtitle"/>
         <div class="slide-content">
           <div class="hashteg">#ЭтоВсеТатнефть</div>
           <div class="title">> {{item.title}}</div>
