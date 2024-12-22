@@ -5,6 +5,7 @@ export interface IBanner {
   image: string;
   mobImage: string;
   color: string;
+  background: string;
 }
 
 export const banners: IBanner[] = [
@@ -15,6 +16,7 @@ export const banners: IBanner[] = [
     image: '/banners/1.png',
     mobImage: '/mob-banners/1.png',
     color: 'white',
+    background: '#213303'
   },
   {
     title: '80 000',
@@ -23,6 +25,7 @@ export const banners: IBanner[] = [
     image: '/banners/2.png',
     mobImage: '/mob-banners/2.png',
     color: 'black',
+    background: '#082843'
   },
   {
     title: '400 000',
@@ -31,6 +34,7 @@ export const banners: IBanner[] = [
     image: '/banners/3.png',
     mobImage: '/mob-banners/3.png',
     color: 'white',
+    background: '#161412'
   },
   {
     title: '42 000',
@@ -39,6 +43,7 @@ export const banners: IBanner[] = [
     image: '/banners/4.png',
     mobImage: '/mob-banners/4.png',
     color: 'black',
+    background: '#EF341F'
   },
   {
     title: '1,5 млн',
@@ -47,6 +52,7 @@ export const banners: IBanner[] = [
     image: '/banners/5.png',
     mobImage: '/mob-banners/5.png',
     color: 'black',
+    background: '#4C6F97'
   },
   {
     title: '145 000',
@@ -55,6 +61,7 @@ export const banners: IBanner[] = [
     image: '/banners/6.png',
     mobImage: '/mob-banners/6.png',
     color: 'white',
+    background: '#0172F7'
   },
   {
     title: '29 млн',
@@ -63,6 +70,7 @@ export const banners: IBanner[] = [
     image: '/banners/7.png',
     mobImage: '/mob-banners/7.png',
     color: 'white',
+    background: '#577811'
   },
   {
     title: '12 000',
@@ -71,6 +79,7 @@ export const banners: IBanner[] = [
     image: '/banners/8.png',
     mobImage: '/mob-banners/8.png',
     color: 'white',
+    background: '#0D43D4'
   },
   {
     title: '18 млрд',
@@ -79,6 +88,7 @@ export const banners: IBanner[] = [
     image: '/banners/9.png',
     mobImage: '/mob-banners/9.png',
     color: 'black',
+    background: '#5E3F19'
   },
   {
     title: '14',
@@ -87,6 +97,7 @@ export const banners: IBanner[] = [
     image: '/banners/10.png',
     mobImage: '/mob-banners/10.png',
     color: 'black',
+    background: '#7E7A34'
   },
   {
     title: '103,8',
@@ -95,6 +106,7 @@ export const banners: IBanner[] = [
     image: '/banners/11.png',
     mobImage: '/mob-banners/11.png',
     color: 'black',
+    background: '#0487CF'
   },
   {
     title: '17',
@@ -103,6 +115,7 @@ export const banners: IBanner[] = [
     image: '/banners/12.png',
     mobImage: '/mob-banners/12.png',
     color: 'black',
+    background: '#4E95DA'
   },
   {
     title: '9',
@@ -111,6 +124,7 @@ export const banners: IBanner[] = [
     image: '/banners/13.png',
     mobImage: '/mob-banners/13.png',
     color: 'white',
+    background: '#4E7800'
   },
   {
     title: '450 000',
@@ -119,6 +133,7 @@ export const banners: IBanner[] = [
     image: '/banners/14.png',
     mobImage: '/mob-banners/14.png',
     color: 'black',
+    background: '#416332'
   },
   {
     title: '116 000',
@@ -127,6 +142,7 @@ export const banners: IBanner[] = [
     image: '/banners/15.png',
     mobImage: '/mob-banners/15.png',
     color: 'white',
+    background: '#3A570A'
   },
   {
     title: '1100',
@@ -135,5 +151,6 @@ export const banners: IBanner[] = [
     image: '/banners/16.png',
     mobImage: '/mob-banners/16.png',
     color: 'white',
+    background: '#040B19'
   },
 ]

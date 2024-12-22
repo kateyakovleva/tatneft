@@ -28,7 +28,6 @@
 
 
 .sub-text-green {
-  width: 300px;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -37,18 +36,18 @@
 }
 
 .padding-left {
-  padding: 60px 80px 0 0;
+  padding: 40px 104px 40px 0;
 }
 
 .padding-right {
-  padding: 60px 0 0 80px;
+  padding: 85px 0 85px 104px;
 }
 
 .flow {
-  transform: rotate(12deg);
-  width: 210px;
-  bottom: 0;
-  right: -120px;
+  transform: rotate(-50deg);
+  width: 208px;
+  bottom: -130px;
+  right: -140px;
 }
 
 @media (max-width: 1050px) {
@@ -76,7 +75,7 @@
     margin-bottom: 20px;
   }
 
-  .mb-50 {
+  .mb-100 {
     margin-bottom: 30px;
   }
 
