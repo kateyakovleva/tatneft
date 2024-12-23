@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForOf } from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 import { faqs } from '../../../../data/faq';
 import { FaqItemComponent } from '../../../../components/faq/faq-item.component';
 
@@ -8,12 +8,13 @@ import { FaqItemComponent } from '../../../../components/faq/faq-item.component'
   standalone: true,
   imports: [
     NgForOf,
-    FaqItemComponent
+    FaqItemComponent,
   ],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.scss'
 } )
 export class FAQComponent {
+
 
   protected readonly faqs = faqs;
 }

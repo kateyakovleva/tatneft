@@ -115,13 +115,19 @@ img {
   width: 100%;
 }
 
+.w-80 {
+  width: 80%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
 .w-20 {
   width: 20%;
 }
 
-.w-80 {
-  width: 80%;
-}
+
 
 .padding-20 {
   padding: 20px 0;
@@ -182,5 +188,9 @@ markdown {
   .container {
     width: 96%;
     margin: 0 auto 0;
+  }
+
+  .w-45 {
+    width: 100%;
   }
 }

@@ -1,94 +1,96 @@
-.picture-back {
-  background-image: url("../../../../../../public/images/work.png");
-  border-radius: 30px;
-  width: 100%;
-  background-position: center;
-  height: 665px;
-  margin-top: 100px;
-  margin-bottom: 120px;
-  color: #ffffff;
-  padding: 63px 0px 52px 50px;
-}
-
-.title {
+.title-text {
   font-size: 42px;
   font-weight: 500;
   line-height: 50px;
   text-align: start;
+  color: #00A867;
   margin-bottom: 40px;
+  text-align: start;
 }
 
-.sub-title {
-  width: 450px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
+.padding-main {
+  padding: 75px 50px 50px 50px;
+}
+
+.sub-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
   text-align: start;
+  color: #101010;
   margin-bottom: 20px;
 }
 
-.display-none {
-  display: none;
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-95 {
+  margin-bottom: 95px;
+}
+
+.shadow {
+  -webkit-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
 }
 
 .btn {
   margin-top: 40px;
-  width: 162px;
+  width: 313px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 22px;
   padding: 15px 20px;
   border-radius: 100px;
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
 }
 
 @media (max-width: 1050px) {
-  .display-none {
-    margin-top: 60px;
-    display: flex;
-    background-image: url("../../../../../../public/images/fon2.jpg");
-    background-position: center;
-    background-size: cover;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    width: 100%;
-    height: 200px;
+
+  .mobile-container {
+    flex-direction: column;
   }
 
-  .picture-back {
-    background-image: url("../../../../../../public/images/fon.png");
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    width: 100%;
-    height: 600px;
-    margin-top: 0;
-    margin-bottom: 60px;
+  .padding-main {
     padding: 30px 20px;
   }
 
-  .title {
+  .title-text {
     font-size: 28px;
     line-height: 33px;
-    text-align: center;
     margin-bottom: 20px;
   }
 
-  .sub-title {
-    width: 100%;
-    font-size: 14px;
+  .sub-text {
+    font-size: 16px;
     font-weight: 400;
-    line-height: 19px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .mt-60 {
+    margin-top: 30px;
+  }
+
+  .mb-80 {
+    margin-bottom: 30px;
   }
 
   .btn {
+    text-align: start;
     margin-top: 10px;
-    width: 162px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    padding: 15px 20px;
-    border-radius: 100px;
-    border: 1px solid #ffffff;
+    width: 215px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px 20px;
+
   }
 
 }

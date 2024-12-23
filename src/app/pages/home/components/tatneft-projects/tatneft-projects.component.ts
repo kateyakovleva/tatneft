@@ -22,6 +22,12 @@ import { NgIf } from '@angular/common';
 } )
 export class TatneftProjectsComponent implements AfterViewChecked {
 
+  visible = true;
+
+  isVisible() {
+    return this.visible === false;
+  }
+
   items = [
     {
       id: 1,

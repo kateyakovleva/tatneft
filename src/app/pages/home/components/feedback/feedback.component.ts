@@ -14,6 +14,12 @@ import { isMobile } from '../../../../utils/utils';
 } )
 export class FeedbackComponent implements AfterViewChecked {
 
+  visible = true;
+
+  isVisible() {
+    return this.visible === false;
+  }
+
   items = [
     {
       id: 1,
@@ -47,7 +53,7 @@ export class FeedbackComponent implements AfterViewChecked {
         '            Заботиться о себе, своей семье, своем городе, своей стране.',
       counter: '567'
     },
-  ]
+  ];
 
   isMobile = isMobile;
 
@@ -55,15 +61,15 @@ export class FeedbackComponent implements AfterViewChecked {
 
   onPage( event: CarouselPageEvent ) {
     // this.page = event.page || 0;
-  }
+  };
 
   next() {
     this.page = Math.min( this.page + 1, this.items.length - 1 );
-  }
+  };
 
   prev() {
     this.page = Math.max( this.page - 1, 0 );
-  }
+  };
 
   ngAfterViewChecked(): void {
     if ( !isMobile ) {
@@ -78,5 +84,5 @@ export class FeedbackComponent implements AfterViewChecked {
         // viewport.style.paddingRight = `${ p }px`;
       }
     }
-  }
+  };
 }
