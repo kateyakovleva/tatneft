@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Carousel } from 'primeng/carousel';
 import { PrimeTemplate } from 'primeng/api';
 import { banners } from '../../../../data/banners';
@@ -15,18 +15,40 @@ import { isMobile } from '../../../../utils/utils';
   styleUrl: './banner.component.scss',
   encapsulation: ViewEncapsulation.None
 } )
-export class BannerComponent {
+export class BannerComponent implements OnInit {
   isMobile = isMobile;
 
-  page = 0;
+  page = 1;
+  history: number[] = [];
 
   next() {
-    this.page = Math.min( this.page + 1, this.banners.length - 1 );
+    this.page = this.random();
   }
 
   prev() {
-    this.page = Math.max( this.page - 1, 0 );
+    if ( this.history.length ) {
+      //@ts-ignore
+      this.page = this.history.pop()
+    }
+  }
+
+  random(): number {
+    const max = this.banners.length - 1;
+    const min = 0;
+    const page = Math.floor( Math.random() * ( max - min + 1 ) ) + min;
+
+    if ( page === this.page ) {
+      return this.random();
+    }
+    this.history.push( this.page );
+    return page;
   }
 
   protected readonly banners = banners;
+
+  ngOnInit(): void {
+    setTimeout( () => {
+      this.page = 0;
+    }, 50 );
+  }
 }

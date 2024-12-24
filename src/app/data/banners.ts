@@ -5,6 +5,7 @@ export interface IBanner {
   image: string;
   mobImage: string;
   color: string;
+  mobColor: string;
   background: string;
 }
 
@@ -15,7 +16,8 @@ export const banners: IBanner[] = [
     description: 'нефти добыто за 75-летнюю историю Компании',
     image: '/banners/1.png',
     mobImage: '/mob-banners/1.png',
-    color: 'white',
+    color: 'black',
+    mobColor: 'black',
     background: '#B3CEFA',
   },
   {
@@ -25,6 +27,7 @@ export const banners: IBanner[] = [
     image: '/banners/19.png',
     mobImage: '/mob-banners/19.png',
     color: 'black',
+    mobColor: 'black',
     background: '#f1fedc',
   },
   {
@@ -34,6 +37,7 @@ export const banners: IBanner[] = [
     image: '/banners/3.png',
     mobImage: '/mob-banners/3.png',
     color: 'white',
+    mobColor: 'white',
     background: '#161412',
   },
   {
@@ -42,7 +46,8 @@ export const banners: IBanner[] = [
     description: 'ежегодно получают помощь и поддержку для реализации проектов от Компании',
     image: '/banners/4.png',
     mobImage: '/mob-banners/4.png',
-    color: 'white',
+    color: 'black',
+    mobColor: 'white',
     background: '#EF341F',
   },
   {
@@ -51,7 +56,8 @@ export const banners: IBanner[] = [
     description: 'выпущено в водоемы в рамках экологических проектов',
     image: '/banners/5.png',
     mobImage: '/mob-banners/5.png',
-    color: 'white',
+    color: 'black',
+    mobColor: 'white',
     background: '#4C6F97',
   },
   {
@@ -61,6 +67,7 @@ export const banners: IBanner[] = [
     image: '/banners/6.png',
     mobImage: '/mob-banners/6.png',
     color: 'white',
+    mobColor: 'white',
     background: '#0172F7',
   },
   {
@@ -70,6 +77,7 @@ export const banners: IBanner[] = [
     image: '/banners/7.png',
     mobImage: '/mob-banners/7.png',
     color: 'white',
+    mobColor: 'white',
     background: '#577811',
   },
   {
@@ -79,6 +87,7 @@ export const banners: IBanner[] = [
     image: '/banners/8.png',
     mobImage: '/mob-banners/8.png',
     color: 'white',
+    mobColor: 'white',
     background: '#0D43D4',
   },
   {
@@ -88,6 +97,7 @@ export const banners: IBanner[] = [
     image: '/banners/15.png',
     mobImage: '/mob-banners/15.png',
     color: 'white',
+    mobColor: 'white',
     background: '#5E3F19',
   },
   {
@@ -96,7 +106,8 @@ export const banners: IBanner[] = [
     description: '«Татнефть» является лидером по климатическим проектам в России',
     image: '/banners/10.png',
     mobImage: '/mob-banners/10.png',
-    color: 'white',
+    color: 'black',
+    mobColor: 'white',
     background: '#7E7A34',
   },
   {
@@ -106,6 +117,7 @@ export const banners: IBanner[] = [
     image: '/banners/17.png',
     mobImage: '/mob-banners/17.png',
     color: 'black',
+    mobColor: 'black',
     background: '#F0ECE2',
   },
   {
@@ -115,6 +127,7 @@ export const banners: IBanner[] = [
     image: '/banners/18.png',
     mobImage: '/mob-banners/18.png',
     color: 'black',
+    mobColor: 'black',
     background: '#C4C2ED',
   },
   {
@@ -123,7 +136,8 @@ export const banners: IBanner[] = [
     description: 'выращено школьниками в рамках программы «Школьные биолаборатории»',
     image: '/banners/14.png',
     mobImage: '/mob-banners/14.png',
-    color: 'white',
+    color: 'black',
+    mobColor: 'white',
     background: '#416332',
   },
   {
@@ -132,7 +146,8 @@ export const banners: IBanner[] = [
     description: 'участвуют в проекте «Посланники ЦУР «Татнефти»',
     image: '/banners/9.png',
     mobImage: '/mob-banners/9.png',
-    color: 'white',
+    color: 'black',
+    mobColor: 'white',
     background: '#3A570A',
   },
   {
@@ -142,6 +157,7 @@ export const banners: IBanner[] = [
     image: '/banners/16.png',
     mobImage: '/mob-banners/16.png',
     color: 'white',
+    mobColor: 'black',
     background: '#040B19',
   },
   {
@@ -151,6 +167,7 @@ export const banners: IBanner[] = [
     image: '/banners/12.png',
     mobImage: '/mob-banners/12.png',
     color: 'black',
+    mobColor: 'black',
     background: '#ffffff',
   },
 ];

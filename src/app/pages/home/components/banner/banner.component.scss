@@ -105,6 +105,18 @@ app-banner {
     }
   }
 
+  .p-carousel-item-list {
+    transition: none !important;
+  }
+
+  .p-carousel-item {
+    opacity: 0;
+    transition: .5s;
+
+    &.p-carousel-item-active {
+      opacity: 1;
+    }
+  }
 }
 
 @media (max-width: 1050px) {
