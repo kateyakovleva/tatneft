@@ -23,6 +23,10 @@ app-banner {
     }
   }
 
+  .navigators {
+    display: flex;
+  }
+
   .black {
     .p-carousel-indicator-list {
       .p-carousel-indicator-button {
@@ -208,8 +212,8 @@ app-banner {
 
     .p-carousel-footer {
       position: absolute;
-      right: 400px;
-      bottom: 90px;
+      left: 22px;
+      bottom: 33px;
 
       .black {
         svg path {

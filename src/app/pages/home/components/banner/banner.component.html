@@ -14,7 +14,7 @@
         <img [src]="isMobile ? item.mobImage : item.image" [alt]="item.title + ' ' + item.subtitle"/>
         <div class="slide-content" [style.background-color]="isMobile && item.background">
           <div class="hashteg">#ЭтоВсеТатнефть</div>
-          <div class="title">> {{item.title}}</div>
+          <div class="title">{{item.title}}</div>
           <div class="subtitle">{{item.subtitle}}</div>
           <div class="description">{{item.description}}</div>
         </div>
@@ -22,7 +22,7 @@
     </ng-template>
 
     <ng-template pTemplate="footer">
-      <div [class]="'navigators gap-15 ' + banners[page].color">
+      <div [class]="'navigators ' + (isMobile ? banners[page].mobColor : banners[page].color)">
         <button type="button" (click)="prev()" class="mr-10">
           <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 6H3" stroke-width="1.4" stroke-linecap="square"/>
