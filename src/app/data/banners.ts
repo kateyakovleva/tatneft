@@ -101,7 +101,7 @@ export const banners: IBanner[] = [
     background: '#5E3F19',
   },
   {
-    title: '14',
+    title: '16',
     subtitle: 'зарегистрированных проектов',
     description: '«Татнефть» является лидером по климатическим проектам в России',
     image: '/banners/10.png',
@@ -168,6 +168,6 @@ export const banners: IBanner[] = [
     mobImage: '/mob-banners/12.png',
     color: 'black',
     mobColor: 'black',
-    background: '#ffffff',
+    background: '#C0DFF4',
   },
 ];
