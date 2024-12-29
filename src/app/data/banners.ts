@@ -101,7 +101,7 @@ export const banners: IBanner[] = [
     background: '#5E3F19',
   },
   {
-    title: '16',
+    title: '18',
     subtitle: 'зарегистрированных проектов',
     description: '«Татнефть» является лидером по климатическим проектам в России',
     image: '/banners/10.png',
