@@ -5,29 +5,34 @@
         <img src="images/close.svg" alt="close" style="padding: 10px 10px 0 0"/>
       </button>
     </div>
-    <div class="content-container d-flex direction-column">
+    <form #form (submit)="$event.preventDefault()" class="content-container d-flex direction-column">
       <div class="title-g">Каким добрым делом хотите поделиться?</div>
-      <div class="d-flex j-c-start mb-20 direction-column">
+      <div [class]="'d-flex j-c-start mb-20 direction-column ' + (errors.name ? 'red' :'')">
         <label class="label">Ваше имя</label>
-        <input class="input" placeholder="Иванов Иван"/>
+        <input required name="name" [class]="'input ' + (errors.name ? 'red-input' :'')" placeholder="Иванов Иван"/>
       </div>
-      <div class="d-flex j-c-start mb-20 direction-column">
+      <div [class]="'d-flex j-c-start mb-20 direction-column ' + (errors.phone ? 'red' :'')">
         <label class="label">Номер телефона</label>
-        <input class="input" placeholder="+7(900)000-00-00"/>
+        <input required name="phone" [class]="'input ' + (errors.name ? 'red-input' :'')"
+               placeholder="+7(900)000-00-00"/>
       </div>
-      <div class="d-flex j-c-start mb-20 direction-column">
+      <div [class]="'d-flex j-c-start mb-20 direction-column ' + (errors.email ? 'red' :'')">
         <label class="label">Ваш Email</label>
-        <input class="input" placeholder="Введите свой e-mail"/>
+        <input name="email" type="email" [class]="'input ' + (errors.name ? 'red-input' :'')"
+               placeholder="Введите свой e-mail"/>
       </div>
-      <div class="d-flex j-c-start mb-20 direction-column">
+      <div [class]="'d-flex j-c-start mb-20 direction-column ' + (errors.description ? 'red' :'')">
         <label class="label">Здесь вы можете рассказать о своём добром деле</label>
-        <textarea class="input" placeholder="Что хотите предложить?" style="min-height: 104px"></textarea>
+        <textarea required name="description" [class]="'input ' + (errors.name ? 'red-input' :'')"
+                  placeholder="О чём хотите рассказать?"
+                  style="min-height: 104px"></textarea>
       </div>
-      <button type="submit" class="submit-btn" (click)="open()">Отправить</button>
+      <button [disabled]="loading" type="submit" class="submit-btn" (click)="open()">Отправить</button>
       <div class="sub-text-g">
         Нажимая кнопку «Отправить», вы даёте согласие на обработку персональных данных и публикацию вашего ответа на
         сайте 75летсоздаемдобро.рф
       </div>
-    </div>
+    </form>
   </div>
 </div>
+<app-modal-success *ngIf="modalSuccess" (onClose)="modalSuccess = false"/>

@@ -31,10 +31,9 @@ class SendFormEmail extends Mailable
     {
         $data = array_merge([
             'name' => '',
-            'company' => '',
             'phone' => '',
             'email' => '',
-            'tariff' => '',
+            'description' => '',
         ], $this->request->all());
         return new Content(
             markdown: 'mail.send-form',

@@ -55,6 +55,15 @@
     right: 120px;
   }
 
+  .p-carousel-viewport .p-carousel-item {
+    flex: 0 0 50% !important;;
+  }
+
+  @media (max-width: 1000px) {
+    .p-carousel-viewport .p-carousel-item {
+      flex: 1 0 100% !important;
+    }
+  }
 }
 
 @media (max-width: 1050px) {

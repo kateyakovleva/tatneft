@@ -1,10 +1,9 @@
 <x-mail::message>
-    <p>Поступил новый запрос</p>
+    <p>{{$name}} поделился добром</p>
     <p>Имя: {{ $name }}</p>
-    <p>Компания: {{ $company }}</p>
     <p>Телефон: {{ $phone }}</p>
     <p>Email: {{ $email }}</p>
-    <p>Тариф: {{ $tariff }}</p>
+    <p>Описание: {{ $description }}</p>
 
     {{ config('app.name') }}
 </x-mail::message>

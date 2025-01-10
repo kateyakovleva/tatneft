@@ -18,6 +18,8 @@ class BaseModel extends Model
 {
     use AfterSaveEvent;
 
+    protected $guarded = [];
+
     public function __construct(array $attributes = [])
     {
         $this->hidden = array_merge($this->hidden, array_values(self::$hiddens[static::class] ?? []));

@@ -83,7 +83,7 @@ export const banners: IBanner[] = [
   {
     title: '> 12 000',
     subtitle: 'детей',
-    description: 'ежегодно отдыхает в лагерях компании.',
+    description: 'ежегодно отдыхает в лагерях компании',
     image: '/banners/8.png',
     mobImage: '/mob-banners/8.png',
     color: 'white',

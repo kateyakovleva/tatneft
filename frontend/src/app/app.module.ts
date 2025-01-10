@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalWindowComponent } from "./components/modal-window/modal-window.component";
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule( {
   declarations: [
@@ -31,6 +32,7 @@ import { ModalWindowComponent } from "./components/modal-window/modal-window.com
     ModalWindowComponent,
   ],
   providers: [
+    provideHttpClient( withFetch() ),
     provideMarkdown()
   ],
   bootstrap: [ AppComponent ]

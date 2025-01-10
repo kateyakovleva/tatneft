@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\FormRequest;
 use App\Mail\SendFormEmail;
+use App\Models\GoodCase;
 use App\Models\Setting;
 use Mail;
 
-class CustomerController extends Controller
+class FormController extends Controller
 {
     public function form(FormRequest $request)
     {
@@ -15,6 +16,8 @@ class CustomerController extends Controller
 
         Mail::to($email)
             ->send(new SendFormEmail($request));
+
+        GoodCase::create(['author' => $request->name, 'description' => $request->description]);
 
         return response()->json();
     }

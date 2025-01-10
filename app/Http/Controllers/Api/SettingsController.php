@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\City;
+use App\Models\GoodCase;
+use App\Models\Project;
 use App\Models\Setting;
-use App\Models\Skill;
-use App\Models\Specialization;
-use App\Models\Tariff;
 
 class SettingsController extends Controller
 {
@@ -18,11 +16,8 @@ class SettingsController extends Controller
             $response['content'][$item->code] = $item->value;
         }
 
-        $response['tariffs'] = Tariff::all();
-        $response['specializations'] = Specialization::all();
-        $response['skills'] = Skill::all();
-        $response['cities'] = City::all();
-
+        $response['projects'] = Project::where('status', true)->get();
+        $response['cases'] = GoodCase::where('status', true)->get();
         return response()->json($response);
     }
 }

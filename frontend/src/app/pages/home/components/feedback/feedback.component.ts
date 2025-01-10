@@ -1,59 +1,28 @@
 import { AfterViewChecked, Component, ViewEncapsulation } from '@angular/core';
 import { CarouselModule, CarouselPageEvent } from "primeng/carousel";
 import { ButtonComponent } from '../../../../components/button/button.component';
-import { NgIf } from '@angular/common';
+import { AsyncPipe, NgIf } from '@angular/common';
 import { isMobile } from '../../../../utils/utils';
+import { SettingsStore } from '../../../../stores/SettingsStore';
 
 @Component( {
   selector: 'app-feedback',
   standalone: true,
-  imports: [ CarouselModule, ButtonComponent, NgIf ],
+  imports: [ CarouselModule, ButtonComponent, NgIf, AsyncPipe ],
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.scss',
   encapsulation: ViewEncapsulation.None,
 } )
 export class FeedbackComponent implements AfterViewChecked {
-
-  visible = true;
-
-  isVisible() {
-    return this.visible === false;
+  constructor(
+    public settings: SettingsStore,
+  ) {
+    settings.projects.subscribe( ( p ) => {
+      this.itemsCount = p?.length || 0;
+    } )
   }
 
-  items = [
-    {
-      id: 1,
-      name: 'Айрапетова Элина',
-      text: 'Добрые дела - это хорошие поступки, которые совершают люди.\n' +
-        '            Они приносят пользу другим людям. Добрые дела делаются просто так и не нуждаются в благодарности.\n' +
-        '            Добрые поступки и забота.',
-      counter: '234'
-    },
-    {
-      id: 2,
-      name: 'Гиязов Марат',
-      text: 'То, что идет от сердца к сердцу.\n' +
-        '            Желание отдавать добро и не ждать ничего взамен. Когда ты делаешь что-то значимое для другого человека, и \n' +
-        'сердце твое наполняется радостью.',
-      counter: '54'
-    },
-    {
-      id: 3,
-      name: 'Соколовский Иван',
-      text: 'Это может каждый.\n' +
-        '            Раз в неделю, раз в месяц или даже раз в год - это всегда останется добрым делом.\n' +
-        '            А любое доброе дело всегда находит отклик среди неравнодушных людей.',
-      counter: '101'
-    },
-    {
-      id: 4,
-      name: 'Смирнов Павел',
-      text: 'Даже самое малое доброе дело может стать огромным делом в жизни человека.\n' +
-        '            Сделать что-то полезное просто так. Подать пример другим.\n' +
-        '            Заботиться о себе, своей семье, своем городе, своей стране.',
-      counter: '567'
-    },
-  ];
+  itemsCount = 0;
 
   isMobile = isMobile;
 
@@ -64,7 +33,7 @@ export class FeedbackComponent implements AfterViewChecked {
   };
 
   next() {
-    this.page = Math.min( this.page + 1, this.items.length - 1 );
+    this.page = Math.min( this.page + 1, this.itemsCount - 1 );
   };
 
   prev() {

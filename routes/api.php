@@ -22,4 +22,4 @@ Route::prefix('settings')->group(function () {
     Route::get('/', [\App\Http\Controllers\Api\SettingsController::class, 'index']);
 });
 
-Route::post('/form-request', [\App\Http\Controllers\Api\CustomerController::class, 'form']);
+Route::post('/form-request', [\App\Http\Controllers\Api\FormController::class, 'form']);
