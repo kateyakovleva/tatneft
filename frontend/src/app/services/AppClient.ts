@@ -87,7 +87,7 @@ export const apiUrl = ( url: string ) => {
     if ( !url.startsWith( '/' ) ) url = '/' + url;
     // url = `//online-platform.ru/api${ url }`;
     // url = `//hh.wi-studio.ru/api${ url }`;
-    url = `//75летсоздаемдобро.рф//api${ url }`;
+    url = `//75летсоздаемдобро.рф/api${ url }`;
   }
 
   return url;
