@@ -6,6 +6,7 @@ import { DropdownComponent } from '../../../../components/dropdown/dropdown.comp
 import { isMobile } from '../../../../utils/utils';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { SettingsStore } from '../../../../stores/SettingsStore';
+import { IProject } from '../../../../types/settings';
 
 @Component( {
   selector: 'app-tatneft-projects',
@@ -28,11 +29,11 @@ export class TatneftProjectsComponent implements AfterViewChecked {
     public settings: SettingsStore,
   ) {
     settings.projects.subscribe( ( p ) => {
-      this.itemsCount = p?.length || 0;
+      this.items = p || [];
     } )
   }
 
-  itemsCount = 0;
+  items: IProject[] = [];
 
   isMobile = isMobile;
 
@@ -43,7 +44,7 @@ export class TatneftProjectsComponent implements AfterViewChecked {
   }
 
   next() {
-    this.page = Math.min( this.page + 1, this.itemsCount - 1 );
+    this.page = Math.min( this.page + 1, this.items.length - 1 );
   }
 
   prev() {

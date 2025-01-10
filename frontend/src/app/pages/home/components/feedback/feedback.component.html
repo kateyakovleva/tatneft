@@ -1,4 +1,4 @@
-<div class="d-flex direction-column container mb-120 feedback-container" *ngIf="settings.cases | async; let items">
+<div class="d-flex direction-column container mb-120 feedback-container" *ngIf="items.length">
   <p-carousel
     [style.width]="!isMobile ? '100vw' : ''"
     [style.margin-bottom]="'30px'"

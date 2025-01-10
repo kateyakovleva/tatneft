@@ -1,4 +1,4 @@
-<div class="container d-flex direction-column tatneft-projects" *ngIf="settings.projects | async; let items">
+<div class="container d-flex direction-column tatneft-projects" *ngIf="items.length">
   <div class="title">Проекты «Татнефть»</div>
   <app-dropdown style="margin-bottom: 30px"></app-dropdown>
   <p-carousel

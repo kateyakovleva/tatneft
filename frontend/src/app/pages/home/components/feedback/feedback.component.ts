@@ -4,6 +4,7 @@ import { ButtonComponent } from '../../../../components/button/button.component'
 import { AsyncPipe, NgIf } from '@angular/common';
 import { isMobile } from '../../../../utils/utils';
 import { SettingsStore } from '../../../../stores/SettingsStore';
+import { ICase } from '../../../../types/settings';
 
 @Component( {
   selector: 'app-feedback',
@@ -17,12 +18,12 @@ export class FeedbackComponent implements AfterViewChecked {
   constructor(
     public settings: SettingsStore,
   ) {
-    settings.projects.subscribe( ( p ) => {
-      this.itemsCount = p?.length || 0;
+    settings.cases.subscribe( ( p ) => {
+      this.items = p || [];
     } )
   }
 
-  itemsCount = 0;
+  items: ICase[] = [];
 
   isMobile = isMobile;
 
@@ -33,7 +34,7 @@ export class FeedbackComponent implements AfterViewChecked {
   };
 
   next() {
-    this.page = Math.min( this.page + 1, this.itemsCount - 1 );
+    this.page = Math.min( this.page + 1, this.items.length - 1 );
   };
 
   prev() {
