@@ -16,6 +16,11 @@
         <input required name="phone" [class]="'input ' + (errors.name ? 'red-input' :'')"
                placeholder="+7(900)000-00-00"/>
       </div>
+      <div [class]="'d-flex j-c-start mb-20 direction-column ' + (errors.job ? 'red' :'')">
+        <label class="label">Род деятельности</label>
+        <input required name="job" [class]="'input ' + (errors.name ? 'red-input' :'')"
+               placeholder="Например, сотрудник Татнефти"/>
+      </div>
       <div [class]="'d-flex j-c-start mb-20 direction-column ' + (errors.email ? 'red' :'')">
         <label class="label">Ваш Email</label>
         <input name="email" type="email" [class]="'input ' + (errors.name ? 'red-input' :'')"
