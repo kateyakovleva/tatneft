@@ -26,6 +26,7 @@ export interface IProject {
 export interface ICase {
   id: number;
   author: string;
+  kind_activity: string,
   description: string;
   likes: number;
   status: number;
