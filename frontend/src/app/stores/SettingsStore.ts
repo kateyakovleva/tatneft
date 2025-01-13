@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, map, Observable } from "rxjs";
-import { ICase, IProject, ISetting, ISettingContent } from "../types/settings";
+import { ICase, IFaq, IProject, ISetting, ISettingContent } from "../types/settings";
 import { AppClient } from "../services/AppClient";
 
 @Injectable( {
@@ -19,6 +19,10 @@ export class SettingsStore {
 
   get cases(): Observable<ICase[] | undefined> {
     return this._settings.asObservable().pipe( map( r => r?.cases ) );
+  }
+
+  get faqs(): Observable<IFaq[] | undefined> {
+    return this._settings.asObservable().pipe( map( r => r?.faqs ) );
   }
 
   get content(): Observable<ISettingContent | undefined> {

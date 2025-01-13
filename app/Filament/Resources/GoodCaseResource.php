@@ -29,8 +29,10 @@ class GoodCaseResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->label('Описание')
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
+                Forms\Components\Textarea::make('job')
+                    ->label('Род деятельности')
+                    ->required(),
                 Forms\Components\TextInput::make('likes')
                     ->label('Лайки')
                     ->required()
@@ -50,6 +52,11 @@ class GoodCaseResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Описание')
+                    ->limit(50)
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('job')
+                    ->label('Род деятельности')
+                    ->limit(50)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('likes')
                     ->label('Лайки')

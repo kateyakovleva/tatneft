@@ -17,7 +17,7 @@ class FormController extends Controller
         Mail::to($email)
             ->send(new SendFormEmail($request));
 
-        GoodCase::create(['author' => $request->name, 'description' => $request->description]);
+        GoodCase::create(['author' => $request->name, 'description' => $request->description, 'job' => $request->job]);
 
         return response()->json();
     }

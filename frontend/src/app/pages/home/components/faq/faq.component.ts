@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {NgForOf, NgIf} from '@angular/common';
-import { faqs } from '../../../../data/faq';
+import { NgForOf } from '@angular/common';
 import { FaqItemComponent } from '../../../../components/faq/faq-item.component';
+import { SettingsStore } from '../../../../stores/SettingsStore';
+import { IFaq } from '../../../../types/settings';
 
 @Component( {
   selector: 'app-faq',
@@ -14,7 +15,11 @@ import { FaqItemComponent } from '../../../../components/faq/faq-item.component'
   styleUrl: './faq.component.scss'
 } )
 export class FAQComponent {
+  constructor(
+    public settings: SettingsStore
+  ) {
+    settings.faqs.subscribe( f => this.faqs = f || [] )
+  }
 
-
-  protected readonly faqs = faqs;
+  protected faqs: IFaq[] = [];
 }
