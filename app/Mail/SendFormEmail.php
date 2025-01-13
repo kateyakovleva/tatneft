@@ -34,6 +34,7 @@ class SendFormEmail extends Mailable
             'phone' => '',
             'email' => '',
             'description' => '',
+            'job' => '',
         ], $this->request->all());
         return new Content(
             markdown: 'mail.send-form',

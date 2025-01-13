@@ -18,6 +18,7 @@ class FormRequest extends LaravelFormRequest
             'name' => 'string|required',
             'phone' => 'string|required',
             'email' => 'nullable|string',
+            'job' => 'string|required'
         ];
     }
 }
