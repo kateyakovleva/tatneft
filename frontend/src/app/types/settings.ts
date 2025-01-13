@@ -2,6 +2,7 @@ export interface ISetting {
   content: ISettingContent;
   projects: IProject[];
   cases: ICase[];
+  faqs: IFaq[];
 }
 
 export interface ISettingContent {
@@ -28,6 +29,14 @@ export interface ICase {
   description: string;
   likes: number;
   status: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface IFaq {
+  id: number;
+  title: string;
+  description: string;
   created_at: string;
   updated_at: string;
 }
