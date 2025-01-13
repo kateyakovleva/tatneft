@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SettingsStore } from '../../../../stores/SettingsStore';
 import { NgForOf } from '@angular/common';
+import {ModalStore} from '../../../../services/ModalStore';
 
 @Component( {
   selector: 'app-main-screen',
@@ -13,7 +14,8 @@ import { NgForOf } from '@angular/common';
 } )
 export class MainScreenComponent {
   constructor(
-    private settings: SettingsStore
+    private settings: SettingsStore,
+    private modal: ModalStore
   ) {
     settings.content.subscribe( ( c ) => {
       let n = String( c?.counter || '0' );
@@ -23,4 +25,8 @@ export class MainScreenComponent {
   }
 
   numbers: string[] = [];
+
+  openModal() {
+    this.modal.show();
+  }
 }

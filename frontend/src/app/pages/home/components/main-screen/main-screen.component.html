@@ -13,7 +13,7 @@
       <div *ngFor="let n of numbers" class="count">{{n}}</div>
     </div>
     <div class="sub-text">* Cчётчик ваших добрых дел</div>
-    <button type="button" class="btn d-flex a-i-center j-c-center">
+    <button type="button" class="btn d-flex a-i-center j-c-center" (click)="openModal()">
       <div class="d-flex a-i-center j-c-center gap-15">
         <img class="first-img" src="images/btn.svg" alt="button"/>
         <img class="second-img" src="images/hover2.svg" alt="arrow"/>
