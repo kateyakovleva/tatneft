@@ -31,7 +31,7 @@ class GoodCaseResource extends Resource
                     ->label('Описание')
                     ->required(),
                 Forms\Components\Textarea::make('job')
-                    ->label('Описание')
+                    ->label('Род деятельности')
                     ->required(),
                 Forms\Components\TextInput::make('likes')
                     ->label('Лайки')
