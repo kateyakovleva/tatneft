@@ -26,7 +26,7 @@ export class MainScreenComponent {
   numbers: string[] = [];
 
   toSection( name: string ) {
-    let top = ( document.querySelector( 'app-' + name ) as HTMLElement )?.offsetTop - 95;
+    let top = ( document.querySelector( 'app-' + name ) as HTMLElement )?.offsetTop + 50;
     window.scrollTo( { top: top, behavior: 'smooth' } );
   }
 
