@@ -14,8 +14,7 @@ import {ModalStore} from '../../../../services/ModalStore';
 } )
 export class MainScreenComponent {
   constructor(
-    private settings: SettingsStore,
-    private modal: ModalStore
+    private settings: SettingsStore
   ) {
     settings.content.subscribe( ( c ) => {
       let n = String( c?.counter || '0' );
@@ -26,7 +25,9 @@ export class MainScreenComponent {
 
   numbers: string[] = [];
 
-  openModal() {
-    this.modal.show();
+  toSection( name: string ) {
+    let top = ( document.querySelector( 'app-' + name ) as HTMLElement )?.offsetTop - 95;
+    window.scrollTo( { top: top, behavior: 'smooth' } );
   }
+
 }
