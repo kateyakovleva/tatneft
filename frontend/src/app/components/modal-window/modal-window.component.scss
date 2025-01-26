@@ -41,12 +41,13 @@
       }
 
       .input {
-        font-family: 'SuisseIntl', serif;
+        font-family: 'Montserrat', sans-serif;
         border: 1px solid #158D64;
         border-radius: 30px;
         padding: 17px 20px;
 
         &::placeholder {
+          font-family: 'Montserrat', sans-serif;
           font-size: 16px;
           font-weight: 400;
           line-height: 22px;
@@ -59,14 +60,17 @@
       }
 
       .red-input {
+        font-family: 'Montserrat', sans-serif;
         border: 1px solid #E73439;
 
         &::placeholder {
+          font-family: 'Montserrat', sans-serif;
           color: #E73439;
         }
       }
 
       .submit-btn {
+        font-family: 'Montserrat', sans-serif;
         color: #ffffff;
         background-color: #158D64;
         font-size: 16px;

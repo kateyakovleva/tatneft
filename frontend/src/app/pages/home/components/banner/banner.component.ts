@@ -22,14 +22,22 @@ export class BannerComponent implements OnInit {
   history: number[] = [];
 
   next() {
+    console.log('next')
     this.page = this.random();
   }
 
   prev() {
+    console.log('prev')
     if ( this.history.length ) {
       //@ts-ignore
       this.page = this.history.pop()
     }
+  }
+
+  touch(event: Event) {
+    console.log('touch', event)
+    // Здесь можно добавить логику, если нужно
+    event.preventDefault(); // предотвращаем смену слайда
   }
 
   random(): number {

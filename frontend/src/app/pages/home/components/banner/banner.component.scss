@@ -4,6 +4,10 @@ app-banner {
     position: relative;
   }
 
+  .p-carousel-content-container {
+    pointer-events: none;
+  }
+
   .p-carousel-indicator-list {
     position: absolute;
     right: 60px;

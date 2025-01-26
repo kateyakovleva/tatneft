@@ -8,6 +8,12 @@
     [showIndicators]="false"
     [showNavigators]="false"
     [class]="isMobile ? banners[page].mobColor : banners[page].color"
+    (swipeleft)="touch($event)"
+    (swiperight)="touch($event)"
+    (swipe)="touch($event)"
+    (swipedown)="touch($event)"
+    (swipeup)="touch($event)"
+
   >
     <ng-template let-item pTemplate="item">
       <div [class]="'slide ' + (isMobile ? banners[page].mobColor : banners[page].color)">
