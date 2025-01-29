@@ -38,20 +38,18 @@
 }
 
 .count {
-  text-align: center;
-  margin-top: 20px;
-  background-color: #ffffff;
+  text-align: end;
   border-radius: 20px;
-  width: 147px;
-  height: 235px;
-  color: #000000;
+  width: 120px;
+  height: 120px;
+  color: #00A867;
   font-size: 170px;
   font-weight: 500;
-  line-height: 238px;
+  line-height: 140px;
 }
 
 .sub-text {
-  margin-top: 20px;
+  margin-top: 45px;
   font-size: 24px;
   font-weight: 500;
   line-height: 34px;
@@ -61,7 +59,7 @@
 
 .btn {
   font-family: 'Montserrat', sans-serif;
-  margin-top: 100px;
+  margin-top: 120px;
   width: 460px;
   padding: 30px;
   border: 1px solid #00A867;
@@ -120,9 +118,14 @@
   }
 
   .container-50 {
+    gap: 30px;
     padding: 0 20px 30px;
     width: 95%;
     align-items: start;
+  }
+
+  .counts {
+    margin-top: -30px;
   }
 
   .logo {
@@ -137,22 +140,23 @@
   }
 
   .count {
-    width: 94px;
-    height: 140px;
+    text-align: start;
+    width: 68px;
+    height: 68px;
     font-size: 96px;
     font-weight: 500;
     line-height: 134px;
   }
 
   .sub-text {
-    margin-top: 14px;
+    margin-top: 36px;
     font-size: 16px;
     line-height: 22px;
     text-align: start;
   }
 
   .btn {
-    margin-top: 30px;
+    margin-top: 0;
     width: 303px;
     padding: 20px 30px;
   }
